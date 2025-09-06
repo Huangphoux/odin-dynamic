@@ -1,0 +1,466 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    line-height: 1.5;
+}
+
+html {
+    font-family:
+        system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji';
+
+    line-height: inherit;
+
+    -webkit-text-size-adjust: 100%;
+    /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+    tab-size: 4;
+    /* 3. Use a more readable tab size (opinionated). */
+
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+    font-family:
+        ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
+        monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+    font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+    border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+Change the font styles in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+    padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+    display: list-item;
+}
+
+body {
+    background-color: Canvas;
+    color: CanvasText;
+    color-scheme: light dark;
+    /* color-scheme: light dark; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ol[role='list'],
+ul[role='list'] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*/*/
+/* Start here !!!! */
+/*/*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    display: grid;
+
+    gap: 20px;
+    padding: 20px;
+}
+
+button {
+    background-color: inherit;
+    cursor: pointer;
+
+    border: 2px solid light-dark(black, white);
+}
+
+p {
+    font-size: xx-large;
+    font-weight: bolder;
+
+    place-self: center;
+}
+
+.todo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 20px;
+}
+
+ul {
+    list-style: none;
+
+    display: grid;
+    gap: 20px;
+
+    border: 2px solid light-dark(black, white);
+
+    padding: 20px;
+
+    place-content: start center;
+}
+
+li {
+    border: 2px solid light-dark(black, white);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    font-size: x-large;
+    font-weight: bold;
+
+    padding: 20px;
+    gap: 20px;
+
+    cursor: pointer;
+}
+
+.list li {
+    cursor: initial;
+}
+
+.name {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.lists .name {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+
+    font-size: xx-large;
+}
+
+.count {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.priority {
+    grid-column: 2 /3;
+    grid-row: 2 / 3;
+
+    background-color: green;
+    color: black;
+}
+
+.important.urgent {
+    background-color: red;
+}
+
+.urgent {
+    background-color: orange;
+}
+
+.important {
+    background-color: yellow;
+}
+
+.list button:nth-child(1) {
+    grid-row: 1 / 3;
+}
+
+.dueDate {
+    grid-column: 2 /3;
+    grid-row: 3 / 4;
+}
+
+#isDone {
+    grid-column: 3 /4;
+    grid-row: 1 / 4;
+}
+
+.add {
+    place-self: start center;
+
+    font-size: x-large;
+    font-weight: bold;
+
+    padding: 20px 50px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 20px;
+}
+
+input:invalid {
+    border: 3px dashed yellow;
+}
+
+input:invalid:required {
+    background-color: red;
+}
+
+input:valid,
+textarea {
+    border: 1px solid black;
+}
+
+dialog {
+    margin: auto;
+
+    padding: 30px 100px;
+
+    box-shadow: 10px 10px light-dark(black, white);
+}
+
+.selected {
+    box-shadow: 10px 10px light-dark(black, white);
+}
+
+dialog p {
+    display: grid;
+    place-content: center;
+
+    margin-bottom: 20px;
+}
+
+::backdrop {
+    /* background-image: linear-gradient(45deg,
+            magenta,
+            rebeccapurple,
+            dodgerblue,
+            green);
+    opacity: 0.75; */
+
+    backdrop-filter: blur(50px);
+}
+
+.close {
+    display: grid;
+    place-self: end;
+
+    padding: 5px 15px;
+
+    position: relative;
+    right: -50px;
+}
+
+.submit {
+    display: grid;
+    place-self: center;
+
+    margin-top: 20px;
+
+    width: 50%;
+
+    grid-column: 1 / 3;
+}
+
+.isDone {
+    color: light-dark(white, black);
+    text-indent: -9999px; /* sends the text off-screen */
+}
+
+.isDone .priority {
+    background-color: initial;
+}
+
+input[type='checkbox']:checked {
+    accent-color: light-dark(black, white);
+}
