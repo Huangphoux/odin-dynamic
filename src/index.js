@@ -1,8 +1,6 @@
 import './style.css';
 
-import { loadController } from './scripts/loadFunc.js';
-import { consoleController } from './scripts/consoleController.js';
+import { dropDown } from './scripts/drop-down.js';
 
-consoleController.loadFromDisk();
-loadController.loadLists();
-loadController.loadList(0);
+dropDown.dropDownify('projects');
+dropDown.dropDownify('demo');
