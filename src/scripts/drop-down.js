@@ -12,6 +12,7 @@ const dropDown = (() => {
 
         menu.style.position = 'absolute';
         menu.style.top = rect.bottom + 20 + 'px';
+        menu.style.zIndex = '1';
     }
 
     function dropDownify(id) {
@@ -28,8 +29,6 @@ const dropDown = (() => {
         menu.addEventListener('mouseleave', () => {
             hideMenu(menu);
         });
-    
-    
     }
 
     return { dropDownify };
