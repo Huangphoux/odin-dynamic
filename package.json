@@ -3,13 +3,9 @@
     "version": "1.0.0",
     "main": "script.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "webpack --config webpack.prod.js",
-        "dev": "webpack serve --open --config webpack.dev.js",
-        "deploy": "git subtree push --prefix dist origin gh-pages",
-        "lint": "eslint --fix",
-        "format:all": "prettier --write src/*",
-        "format:staged": "prettier --write $(git diff --staged --name-only --diff-filter d | xargs)"
+        "build": "webpack",
+        "dev": "webpack serve --open",
+        "deploy": "git subtree push --prefix dist origin gh-pages"
     },
     "keywords": [],
     "author": "",
