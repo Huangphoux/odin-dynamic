@@ -1,16 +1,6 @@
 const imageCarousel = (() => {
     const slides = document.querySelectorAll('.slide');
 
-    function changeSlide(index) {
-        showSlide((slideIndex += index));
-        generateDot();
-    }
-
-    function currentSlide(index) {
-        showSlide((slideIndex = index));
-        generateDot();
-    }
-
     function showSlide(index) {
         if (index > slides.length) {
             slideIndex = 1;
@@ -24,6 +14,16 @@ const imageCarousel = (() => {
         }
 
         slides[slideIndex - 1].style.display = 'block';
+
+        generateDot();
+    }
+
+    function changeSlide(index) {
+        showSlide((slideIndex += index));
+    }
+
+    function currentSlide(index) {
+        showSlide((slideIndex = index));
     }
 
     function generateDot() {
@@ -52,7 +52,6 @@ const imageCarousel = (() => {
 
     function setUp() {
         showSlide(slideIndex);
-        generateDot();
 
         setInterval(changeSlide, 1 * 1000, 1);
 
