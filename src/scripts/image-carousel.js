@@ -53,7 +53,7 @@ const imageCarousel = (() => {
     function setUp() {
         showSlide(slideIndex);
 
-        setInterval(changeSlide, 1 * 1000, 1);
+        setInterval(changeSlide, 1 * 5000, 1);
 
         document.querySelector('.previous').addEventListener('click', () => {
             changeSlide(-1);

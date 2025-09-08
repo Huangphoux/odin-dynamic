@@ -9,4 +9,4 @@ dropDown.dropDownify('demo');
 
 imageCarousel.setUp();
 
-clock.setUp();
+// clock.setUp();
